@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: black;
+}
+
+.header h1 {
+  color: #ff6a00;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: #ff6a00;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") no-repeat center center/cover;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h2 {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  font-size: 40px;
+}
+
+.hero span {
+  color: #ff6a00;
+}
+
+/* SERVICES */
+.services {
+  padding: 50px;
+  text-align: center;
+}
+
+.services h2 {
+  color: #ff6a00;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1e1e1e;
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #ff6a00;
+  transform: scale(1.05);
+}
+
+/* ABOUT */
+.about {
+  padding: 50px;
+  text-align: center;
+  background: black;
+}
+
+/* CONTACT */
+.contact {
+  display: "grid";
+    justify-content: center;
+}
+
+.contact input,
+.contact textarea {
+  width: 20%;
+  margin: 10px;
+  /* padding: 10px; */
+  border-radius: 5px;
+  border: none;
+  
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #ff6a00;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+
