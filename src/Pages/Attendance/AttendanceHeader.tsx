@@ -5,7 +5,9 @@ import type{ AttendanceHeaderProps } from "./Attendance.propTypes";
 
 
 const AttendanceHeader: React.FC<AttendanceHeaderProps> = (
-    { showFilters, paginationObj, setPaginationObj }
+    { showFilters,
+      //  paginationObj, setPaginationObj 
+      }
 ) => {
     const [form] = Form.useForm();
     

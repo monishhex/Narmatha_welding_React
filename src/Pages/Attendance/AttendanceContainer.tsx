@@ -12,8 +12,8 @@ import axios from "axios";
 
 const AttendanceHeader: React.FC<AttendanceContainerProps> = ({
   showFilters,
-  paginationObj,
-  setPaginationObj,
+  // paginationObj,
+  // setPaginationObj,
   setShowFilters,
 }) => {
   const [data, setData] = useState<AttendanceRecord[]>([]);
@@ -52,7 +52,7 @@ const AttendanceHeader: React.FC<AttendanceContainerProps> = ({
     {
       title: "Actions",
       key: "actions",
-      render: (_, record) => (
+      render: (_) => (
         <div style={{ display: "flex", gap: "10px" }}>
           {/* Action buttons/icons go here */}
         </div>
