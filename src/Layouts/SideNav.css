@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidenav {
+  width: 250px;
+  height: 100vh;
+  background: #1e1e2f;
+  color: white;
+  padding: 20px;
+  position: fixed;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* .nav-item {
+  margin: 10px 0;
+} */
+
+.nav-item a,
+.nav-item div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: #343454;
+}
+
+.nav-item.active {
+  background: #4c4cff;
+}

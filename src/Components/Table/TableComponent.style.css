@@ -1,0 +1,69 @@
+.table-component .ant-table-body,
+.table-component .ant-table-content {
+  scrollbar-width: thin;
+  scrollbar-color: #d6d6d6 transparent;
+}
+
+.table-component ::-webkit-scrollbar-thumb {
+  background-color: #eaeaea;
+  border-radius: 4px;
+}
+
+.table-component .ant-table-tbody > tr > td,
+.table-component .ant-table-thead > tr > th {
+  padding: 6px 6px;
+}
+
+.table-component .ant-table-tbody > tr.ant-table-row:hover {
+  background: #fafafa;
+}
+
+.table-component .ant-table-tbody > tr.ant-table-row:hover > td {
+  background: inherit;
+}
+
+.ant-table-wrapper .ant-table-column-sorters {
+  gap: 4px;
+}
+
+/* prevent whole table from moving */
+.table-component,
+.table-component .ant-table,
+.table-component .ant-table-container {
+  overflow-x: hidden;
+}
+
+.ant-table-cell {
+  max-width: 180px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  font-weight: 400 !important;
+}
+
+.ant-table td {
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-weight: 400 !important;
+}
+
+.ant-table th {
+  font-size: 13px;
+  font-weight: 400 !important;
+}
+
+.table-component .ant-table-selection-column {
+  width: 26px !important;
+  padding: 0 !important;
+}
+
+.table-component .ant-checkbox-inner {
+  width: 14.5px !important;
+  height: 14.5px !important;
+}
+
+.table-component .ant-table-tbody > tr.ant-table-row-selected > td {
+  background: #ffffff !important;
+}

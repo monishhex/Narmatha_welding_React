@@ -1,10 +1,12 @@
-import './App.css'
-import HomePage from './Pages/HomePage';
+// import './App.css';
+import AppRoutes from './Routes/AppRoutes';
+import 'antd/dist/reset.css';
+import './App.css';
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <AppRoutes />
     </div>
   );
 }

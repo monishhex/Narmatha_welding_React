@@ -1,118 +1,119 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
+
+.ant-table-cell {
+  max-width: 180px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  font-weight: 400 !important;
 }
 
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: black;
+.ant-table td {
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-weight: 400 !important;
 }
 
-.header h1 {
-  color: #ff6a00;
+.ant-table th {
+  font-size: 13px;
+  font-weight: 500 !important;
+  /* background-color: #4dffac !important; */
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: white;
+.table-filter-icon {
+  cursor: pointer;
+  width: 1.3rem;
 }
 
-nav a:hover {
-  color: #ff6a00;
-}
-
-/* HERO */
-.hero {
-  height: 90vh;
-  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") no-repeat center center/cover;
-  background-size: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero h2 {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  font-size: 40px;
-}
-
-.hero span {
-  color: #ff6a00;
-}
-
-/* SERVICES */
-.services {
-  padding: 50px;
-  text-align: center;
-}
-
-.services h2 {
-  color: #ff6a00;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #1e1e1e;
-  margin: 10px;
-  padding: 20px;
-  width: 200px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: #ff6a00;
-  transform: scale(1.05);
-}
-
-/* ABOUT */
-.about {
-  padding: 50px;
-  text-align: center;
-  background: black;
-}
-
-/* CONTACT */
-.contact {
-  display: "grid";
-    justify-content: center;
-}
-
-.contact input,
-.contact textarea {
-  width: 20%;
-  margin: 10px;
-  /* padding: 10px; */
-  border-radius: 5px;
-  border: none;
-  
-}
-
-.contact button {
-  padding: 10px 20px;
-  background: #ff6a00;
-  border: none;
-  color: white;
+/* Table Action View Icon */
+.table-eye-icon {
+  color: #0071c5;
+  font-size: 12px !important;
   cursor: pointer;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
+.table-delete-icon {
+  color: #ff0800;
+  cursor: pointer;
+  font-size: 12px !important;
 }
 
+.table-edit-icon {
+  color: #00d832;
+  cursor: pointer;
+  font-size: 12px !important;
+}
+
+.table-action-icon-wrapper {
+  display: flex;
+  justify-content: flex-start !important;
+  column-gap: 12px;
+  align-items: center;
+}
+
+/* For toggle state on/off */
+.status-switch.ant-switch {
+  background-color: #ff4d4f !important;
+}
+
+.status-switch.ant-switch-checked {
+  background-color: #52c41a !important;
+}
+
+.status-switch.ant-switch:hover:not(.ant-switch-checked) {
+  background-color: #ff7875 !important;
+}
+
+.status-switch.ant-switch-checked:hover {
+  background-color: #73d13d !important;
+}
+
+.status-switch.ant-switch {
+  transition: all 0.3s ease;
+}
+
+/* Description action view */
+.custom-descriptions .ant-descriptions-item-label {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: transparent !important;
+  border-right: 1px solid #def4ff !important;
+}
+
+.custom-descriptions-padding .ant-descriptions-item-label,
+.custom-descriptions-padding .ant-descriptions-item-content {
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+}
+
+.custom-descriptions .ant-descriptions-item-content {
+  padding: 4px 8px !important;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Border */
+.custom-descriptions .ant-descriptions-view {
+  border: 1px solid #def3fe !important;
+}
+
+.custom-descriptions .ant-descriptions-row {
+  border-bottom: 1px solid #def3fe !important;
+}
+
+.custom-descriptions .ant-descriptions-item {
+  border-right: 1px solid #def3fe !important;
+}
+
+.filter-form {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.filter-form.open {
+  max-height: 85vh;
+  padding: 12px 0px;
+  background-color: #ffffff;
+}
