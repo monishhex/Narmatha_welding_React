@@ -21,6 +21,10 @@ const SideNav: React.FC<{ setMobileOpen?: (val: boolean) => void }> = ({
       label: "Workers",
       children: [
         {
+          key: "/workers/add",
+          label: "Add Worker",
+        },
+        {
           key: "/workers/attendance",
           label: "Attendance",
         },

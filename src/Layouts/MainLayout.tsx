@@ -12,54 +12,84 @@ const { useBreakpoint } = Grid;
 
 const MainLayout: React.FC = () => {
   const screens = useBreakpoint();
+
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
       
-      {/* ✅ Sidebar */}
-      {screens.lg && (
-        <Sider
-          collapsible
-          collapsed={collapsed}
-          trigger={null} // ❗ disable default
-          width={220}
-        >
-          <SideNav />
-        </Sider>
-      )}
+      {/* ✅ Top Header First */}
+     <Header
+  style={{
+    height: "50px",
+    lineHeight: "50px",
+    padding: "0 12px",
+    background: "#fff",
+    display: "flex",
+    alignItems: "center",
+    position: "sticky",
+    top: 0,
+    zIndex: 1000,
+    width: "100%",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+  }}
+      >
+        <Button
+          type="text"
+          onClick={() =>
+            screens.lg
+              ? setCollapsed(!collapsed)
+              : setMobileOpen(true)
+          }
+          icon={
+            collapsed ? (
+              <MenuUnfoldOutlined />
+            ) : (
+              <MenuFoldOutlined />
+            )
+          }
+        />
+      </Header>
 
-      {/* ✅ Mobile Drawer */}
-      {!screens.lg && (
-        <Drawer
-          placement="left"
-          open={mobileOpen}
-          onClose={() => setMobileOpen(false)}
-          width={250}
-        >
-          <SideNav setMobileOpen={setMobileOpen} />
-        </Drawer>
-      )}
-
+      {/* ✅ Body Layout */}
       <Layout>
-        {/* ✅ Header with Burger */}
-        <Header style={{ padding: "0px 16px", background: "#ffff" }}>
-          <Button
-            type="text"
-            onClick={() =>
-              screens.lg
-                ? setCollapsed(!collapsed)
-                : setMobileOpen(true)
-            }
-            icon={
-              collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />
-            }
-          />
-        </Header>
+        
+        {/* ✅ Desktop Sidebar */}
+        {screens.lg && (
+          <Sider
+            collapsible
+            collapsed={collapsed}
+            trigger={null}
+            width={220}
+            style={{
+              minHeight: "calc(100vh - 64px)",
+            }}
+          >
+            <SideNav />
+          </Sider>
+        )}
 
-        {/* ✅ Content */}
-        <Content style={{ padding: "20px" }}>
+        {/* ✅ Mobile Drawer */}
+        {!screens.lg && (
+          <Drawer
+            placement="left"
+            open={mobileOpen}
+            onClose={() => setMobileOpen(false)}
+            width={250}
+            bodyStyle={{ padding: 0 }}
+          >
+            <SideNav setMobileOpen={setMobileOpen} />
+          </Drawer>
+        )}
+
+        {/* ✅ Main Content */}
+        <Content
+          style={{
+            padding: "20px",
+            background: "#f5f5f5",
+          }}
+        >
           <Outlet />
         </Content>
       </Layout>
